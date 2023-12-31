@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="https://icon-library.com/images/gallery-icon-android/gallery-icon-android-21.jpg">
+</head>
+
+<body> 
+        <h1 class="heading">
+            Image Gallery
+        </h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="https://images.pexels.com/photos/1028225/pexels-photo-1028225.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+                <img src="https://images.pexels.com/photos/2104152/pexels-photo-2104152.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+                <img src="https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+                <img src="https://images.pexels.com/photos/2088019/pexels-photo-2088019.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+                <img src="https://images.pexels.com/photos/321552/pexels-photo-321552.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+                <img src="https://images.pexels.com/photos/39531/lotus-lotus-leaf-nature-flowers-39531.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="" class="last">
+            </div>
+            <div class="col">
+                <img src="https://images.pexels.com/photos/1089451/pexels-photo-1089451.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+                <img src="https://images.pexels.com/photos/1653631/pexels-photo-1653631.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+                <img src="https://images.pexels.com/photos/1268129/pexels-photo-1268129.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+                <img src="https://images.pexels.com/photos/610293/pexels-photo-610293.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+                <img src="https://images.pexels.com/photos/920534/pexels-photo-920534.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+                <img src="https://images.pexels.com/photos/237321/pexels-photo-237321.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+                <img src="https://images.pexels.com/photos/1105189/pexels-photo-1105189.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="" class="last">
+            </div>
+            <div class="col">
+                <img src="https://images.pexels.com/photos/1426827/pexels-photo-1426827.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+                <img src="https://images.pexels.com/photos/1090972/pexels-photo-1090972.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+                <img src="https://images.pexels.com/photos/2086621/pexels-photo-2086621.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+                <img src="https://images.pexels.com/photos/2877375/pexels-photo-2877375.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+                <img src="https://images.pexels.com/photos/2258536/pexels-photo-2258536.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+                <img src="https://images.pexels.com/photos/144251/yosemite-national-park-landscape-california-144251.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="" class="last">
+            </div>
+        </div>
+    </div>
+    <div class="popup">
+        <span id="cross">&times;</span>
+        <div class="popup_img">
+            <img src="https://images.pexels.com/photos/1062175/pexels-photo-1062175.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="">
+        </div>
+    </div>
+
+
+
+    <script>
+        let images = document.querySelectorAll("img")
+        let popup = document.querySelector(".popup")
+        let popup_img = document.querySelector(".popup img")
+        let span = document.querySelector("span")
+        let container = document.querySelector(".container")
+        let h = document.querySelector(".heading")
+
+        for (item of images) {
+            item.onclick = function () {
+                popup.style.display = "block"
+                popup_img.src = this.getAttribute('src')
+                container.style.display = "none"
+                h.style.display = "none"
+
+
+            }
+        }
+        span.onclick = function () {
+            popup.style.display = "none"
+            container.style.display = "block"
+            h.style.display = "block"
+           h.style.display ="flex"
+
+
+        }
+
+    </script>
+</body>
+
+</html>
